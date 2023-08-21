@@ -45,5 +45,12 @@
 * **Get the current commit id of a submodule**
 
    ```console
-   git ls-tree HEAD <relative path to submodule>
+   $ git ls-tree HEAD <relative path to submodule>
+   ```
+
+* **Reset branch with changes from another branch**
+
+   ```console
+   $ git checkout <branch to be reset>
+   $ git reset --hard <branch to reset with>
    ```
