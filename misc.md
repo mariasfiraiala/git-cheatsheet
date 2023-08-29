@@ -54,3 +54,18 @@
    $ git checkout <branch to be reset>
    $ git reset --hard <branch to reset with>
    ```
+
+* **Remove file from last commit without deleting it**
+
+   ```console
+   $ git reset --soft HEAD~1
+   $ git restore --staged <file to remove>
+   $ git commit -c ORIG_HEAD
+   ```
+
+* **Entirely remove file from git history**
+
+   ```console
+   $ git filter-branch --index-filter \
+  'git rm --ignore-unmatch --cached <file to remove>' -- <commit to start removing from>^..
+   ```
