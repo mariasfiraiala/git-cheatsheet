@@ -69,3 +69,9 @@
    $ git filter-branch --index-filter \
   'git rm --ignore-unmatch --cached <file to remove>' -- <commit to start removing from>^..
    ```
+
+* **Remove files from remote without deleting them from local using gitignore**
+
+   ```console
+   $ git rm --cached $(git ls-files -i -c -X .gitignore)
+   ```
