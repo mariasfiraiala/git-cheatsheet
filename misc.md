@@ -75,3 +75,9 @@
    ```console
    $ git rm --cached $(git ls-files -i -c -X .gitignore)
    ```
+
+* **Stash only a portion of a file**
+
+   ```console
+   $ git stash --patch <file>
+   ```
