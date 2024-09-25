@@ -81,3 +81,11 @@
    ```console
    $ git stash --patch <file>
    ```
+
+* **Squash last n commits into one**
+
+   ```console
+   $ git reset --hard HEAD~<n commits>
+   $ git merge --squash HEAD@{1}
+   $ git commit
+   ```
